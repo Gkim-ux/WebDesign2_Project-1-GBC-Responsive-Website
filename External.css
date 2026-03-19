@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* 1200px Grid System */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25em; /* 20px using ems */
+}
+
+/* Typography using Ems */
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; margin-bottom: 0.5em; }
+p { font-size: 1em; }
+
+/* Responsive Image */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Nav with Flexbox */
+header {
+    background-color: #002244; /* GBC Deep Blue */
+    padding: 1em 0;
+    color: white;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,34,68,0.7), rgba(0,34,68,0.7)), url('campus.jpg');
+    background-size: cover;
+    color: white;
+    padding: 5em 0;
+    text-align: center;
+}
+
+/* Features Grid with Flexbox */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+    gap: 2em;
+}
+
+.feature-card {
+    flex: 1;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet (Under 1024px) */
+@media (max-width: 1024px) {
+    .features {
+        flex-wrap: wrap;
+    }
+    .feature-card {
+        flex: 1 1 45%; /* 2 cards per row */
+    }
+}
+
+/* Mobile (Under 600px) */
+@media (max-width: 600px) {
+    .nav-wrapper {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f4f4f4;
+    padding: 2em 0;
+    margin-top: 3em;
+    font-size: 0.9em;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+}
